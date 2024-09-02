@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+
+    <title>DeepBasis</title>
+
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <link rel="icon" type="image/png" href="img/seal_icon.png">
+    <!-- Place favicon.ico in the root directory -->
+<!-- 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110862391-3"></script> -->
+    <!-- <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                <strong>
+                    NFPLight: Deep SVBRDF Estimation via </br>
+                    the Combination of Near and Far Field Point lighting </br>
+                </strong>
+                <small>
+                    <!-- To Appear -->
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>
+                    <a href="https://cgliwang.github.io" target="_blank">Li Wang</a>, 
+                    <a href="https://klkjjhjkhjhg.github.io" target="_blank">Lianghao Zhang</a>, 
+                    Fangzhou Gao,
+                    YuZhen Kang,
+                    <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm" target="_blank">Jiawan Zhang</a>
+                  </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="http://cic.tju.edu.cn/" target="_blank">College of Intelligence and Computing, Tianjin University, China</a>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="pdf/NFPLight.pdf">
+                            <image src="images/paper.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pdf/SupplementalMaterial.pdf">
+                            <image src="doc/paperclip.png" height="120px"><br>
+                                <h4><strong>Supplementary material</strong></h4>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://github.com/xilongzhou/PhotoMat">
+                            <image src="images/video.png" height="120px"><br>
+                                <h4><strong> Video </strong></h4>
+                            </a>
+                        </li> -->
+                        <li>
+                            <!-- <a href="https://github.com/CGLiWang/DeepBasis_SVBRDF">
+                            <image src="doc/github_pad.png" height="120px"><br>
+                                <h4><strong> Code </strong></h4>
+                            </a> -->
+                            <image src="doc/github_pad.png" height="120px"><br>
+                                <h4><strong> Code </br> (Coming soon...)</strong></h4>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <strong>
+                        Abstract
+                    </strong>
+                </h3>
+                <image src="images/representation.jpg" class="img-responsive" alt="overview"><br>
+                <!-- <image src="doc/representation2.jpg" class="img-responsive" alt="overview"><br> -->
+                <p class="text-justify">
+                    Recovering spatial-varying bi-directional reflectance distribution function (SVBRDF) from a few hand-held captured images has been a challenging task in computer graphics.
+                    Benefiting from the learned priors from data, single-image methods can obtain plausible SVBRDF estimation results.
+                    However, the extremely limited appearance information in a single image does not suffice for high-quality SVBRDF reconstruction.
+                    Although increasing the number of inputs can improve the reconstruction quality, it also affects the efficiency of real data capture and adds significant computational burdens.
+                    Therefore, the key challenge is to minimize the required number of inputs, while keeping high-quality results. 
+                    To address this, we propose maximizing the effective information in each input through a novel co-located capture strategy that combines near-field and far-field point lighting. 
+                    To further enhance effectiveness, we theoretically investigate the inherent relation between two images.
+                    The extracted relation is strongly correlated with the slope of specular reflectance, substantially enhancing the precision of roughness map estimation.
+                    Additionally, we designed the registration and denoising modules to meet the practical requirements of hand-held capture. 
+                    Quantitative assessments and qualitative analysis have demonstrated that our method achieves superior SVBRDF estimations compared to previous approaches.
+                    All source codes will be publicly released.                 </p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <strong>
+                        Supplementary Video
+                    </strong>
+                </h3>
+                <div class="text-center">
+                    <!-- YouTube
+                    <div style="position:relative;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xOnQ3QsdeLI?si=3mFhd4485xQE_dt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div> -->
+                    bilibili
+                    <div style="position:relative;">
+                        <iframe width="560" height="315"  src="https://player.bilibili.com/player.html?isOutside=true&aid=113066893117511&bvid=BV14fH6e3EQZ&cid=25703089200&p=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    </div>
+            </div>
+        </div>
+
+
+        <!--<div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Fast Forward Video 
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;">
+                        <iframe align="center" width="100%" height="422" src="https://www.youtube.com/embed/jOxkwIGnrcU" frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <strong>
+                        BibTeX
+                    </strong>
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <pre>
+                    <!-- @inproceedings{10.1145/3610548.3618239,
+                        author = {Wang, Li and Zhang, Lianghao and Gao, Fangzhou and Zhang, Jiawan},
+                        title = {DeepBasis: Hand-Held Single-Image SVBRDF Capture via Two-Level Basis Material Model},
+                        year = {2023},
+                        isbn = {9798400703157},
+                        publisher = {Association for Computing Machinery},
+                        address = {New York, NY, USA},
+                        url = {https://doi.org/10.1145/3610548.3618239},
+                        doi = {10.1145/3610548.3618239},
+                        booktitle = {SIGGRAPH Asia 2023 Conference Papers},
+                        articleno = {85},
+                        numpages = {11},
+                        keywords = {Material Reflectance Modeling, SVBRDF, Basis Maiterials, Deep Learning, Rendering},
+                        location = {<conf-loc>, <city>Sydney</city>, <state>NSW</state>, <country>Australia</country>, </conf-loc>},
+                        series = {SA '23}
+                        } -->
+                        Coming soon...
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <strong>
+                        Acknowledgements
+                    </strong>
+                </h3>
+                <p class="text-justify">
+                    We would like to thank anonymous reviewers for their comments, Qishen Wang for his assistance in data collection, Xin Tong for his support.
+                    This work is partially supported by National Natural Science Foundation of China (62172295).
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
